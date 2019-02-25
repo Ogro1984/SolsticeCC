@@ -1,0 +1,20 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="solsticeccModelStoreContainer" CdmEntityContainer="solsticeccEntities">
+    <EntitySetMapping Name="ContactRecords">
+      <EntityTypeMapping TypeName="solsticeccModel.ContactRecords">
+        <MappingFragment StoreEntitySet="ContactRecords">
+          <ScalarProperty Name="PersonId" ColumnName="PersonId" />
+          <ScalarProperty Name="PersonName" ColumnName="PersonName" />
+          <ScalarProperty Name="CompanyName" ColumnName="CompanyName" />
+          <ScalarProperty Name="ProfileImage" ColumnName="ProfileImage" />
+          <ScalarProperty Name="Email" ColumnName="Email" />
+          <ScalarProperty Name="BirthDate" ColumnName="BirthDate" />
+          <ScalarProperty Name="PhoneNumberHome" ColumnName="PhoneNumberHome" />
+          <ScalarProperty Name="PhoneNumberWork" ColumnName="PhoneNumberWork" />
+          <ScalarProperty Name="Addressnumber" ColumnName="Addressnumber" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+  </EntityContainerMapping>
+</Mapping>

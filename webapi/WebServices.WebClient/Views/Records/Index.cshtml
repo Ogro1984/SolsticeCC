@@ -1,0 +1,72 @@
+﻿
+
+@model  IEnumerable<WebServices.WebClient.Data.ContactRecords>
+            
+
+
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>
+    <a href="@Url.Action("Index","Records")" class="btn btn-primary right">Search By Name Or ID</a>
+    Contact Records
+</h2>
+<form action="Records/Index" method="post">
+
+    <label>Search: <input type="text" name="search" value=" " /></label><br />
+    <input type="submit" name="Search" value="Search" class="btn btn-success" />
+
+</form>
+<hr />
+
+<table>
+    <thead>
+        <tr>
+            <td>PersonId</td>
+            <td>PersonName</td>
+            <td>CompanyName</td>
+            <td>ProfileImage</td>
+            <td>Email</td>
+            <td>BirthDate</td>
+            <td>PhoneNumberHome</td>
+            <td>PhoneNumberWork</td>
+            <td>Addressnumber</td>
+            <td>Accions</td>
+
+
+        </tr>
+
+    </thead>
+    <tbody>
+        
+        @foreach (var record in Model)
+
+        {
+            <tr>
+                <td>@record.PersonId</td>
+                <td>@record.PersonName</td>
+                <td>@record.CompanyName</td>
+                <td>@record.Email</td>
+                <td>@record.BirthDate</td>
+                <td>@record.PhoneNumberHome</td>
+                <td>@record.PhoneNumberWork</td>
+                <td>@record.Addressnumber</td>
+                <td>@record.ProfileImage</td>
+                <td>
+                    <a href="@Url.Action("Update","Records",new { id=record.PersonId})" class="btn btn-success right">Update</a>
+                    <a href="@Url.Action("Delete", "Records", new { id = record.PersonId })" class="btn btn-danger right">Delete</a>
+                    <a href="@Url.Action("Details", "Records", new { id = record.PersonId })" class="btn btn-default">Details</a>
+                </td>
+
+            </tr>
+
+
+        }
+
+
+
+    </tbody>
+
+</table>
+

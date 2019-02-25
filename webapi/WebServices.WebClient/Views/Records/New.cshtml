@@ -1,0 +1,71 @@
+﻿@model 
+@{
+    ViewBag.Title = "New";
+}
+
+<h2>New Record</h2>
+<hr />
+
+<form method="post" action="@Url.Action("New","Records")">
+    <div class="form-group">
+        <label>PersonID</label>
+        @Html.TextBoxFor(x => x.PersonId, new { @class = "form-control" })
+
+
+    </div>
+    <div class="form-group">
+        <label>PersonName</label>
+        @Html.TextBoxFor(x => x.PersonName, new { @class = "form-control" })
+
+
+    </div>
+    <div class="form-group">
+        <label>CompanyName</label>
+        @Html.TextBoxFor(x => x.CompanyName, new { @class = "form-control" })
+
+
+    </div>
+    <div class="form-group">
+        <label>ProfileImage</label>
+        @Html.TextBoxFor(x => x.ProfileImage, new { @class = "form-control" })
+
+
+    </div>
+    <div class="form-group">
+        <label>Email</label>
+        @Html.TextBoxFor(x => x.Email, new { @class = "form-control" })
+
+
+    </div>
+    <div class="form-group">
+        <label>BirthDate</label>
+        @Html.TextBoxFor(x => x.BirthDate, new { @class = "form-control" })
+
+
+    </div>
+    <div class="form-group">
+        <label>PhoneNumberHome</label>
+        @Html.TextBoxFor(x => x.PhoneNumberHome, new { @class = "form-control" })
+
+
+    </div>
+    <div class="form-group">
+        <label>PhoneNumberWork</label>
+        @Html.TextBoxFor(x => x.PhoneNumberWork, new { @class = "form-control" })
+
+
+    </div>
+    <div class="form-group">
+        <label>Addressnumber</label>
+        @Html.TextBoxFor(x => x.Addressnumber, new { @class = "form-control" })
+
+
+    </div>
+    <div class="form-group">
+        <input type="submit" class="btn btn-success" value="POST" />
+
+        
+        <a href="@Url.Action("Index","Records")">Back</a>
+
+    </div>
+</form>
